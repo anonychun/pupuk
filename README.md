@@ -19,6 +19,7 @@ rails new app \
   --javascript esbuild \
   --css tailwind \
   --skip-rubocop \
+  --skip-ci \
   -m https://raw.githubusercontent.com/anonychun/paradis/main/template.rb
 ```
 
