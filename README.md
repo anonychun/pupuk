@@ -16,6 +16,7 @@ Create a new Rails application using the template by running the following comma
 
 ```bash
 rails new app \
+  --database postgresql \
   --javascript esbuild \
   --css tailwind \
   --skip-rubocop \
