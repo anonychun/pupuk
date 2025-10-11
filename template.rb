@@ -98,6 +98,9 @@ create_file "app/errors/application_error.rb", <<~RUBY
 RUBY
 
 ignored_files = <<~TXT.prepend("\n")
+  # Yarn
+  /.yarn/
+
   # Folder for JetBrains IDEs
   /.idea/
 
