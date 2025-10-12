@@ -43,7 +43,7 @@ after_bundle do
       <<~YAML.indent(2)
         errors:
           <<: *primary_production
-          database: #{@app_name}_production_errors
+          database: <%= ENV["DATABASE_NAME"] %>_production_errors
           migrations_paths: db/errors_migrate
       YAML
     end
