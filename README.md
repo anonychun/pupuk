@@ -1,10 +1,4 @@
-<p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/338efbcb-e1e4-4bce-8016-4f9c5ebaeb6b" alt="Paradis logo">
-</p>
-
-<h1 align="center">
-  PARADIS
-</h1>
+# Pupuk
 
 This project is a Rails application template designed to streamline the setup of new Rails projects. It includes predefined configurations, routes, and utility modules to help you get started quickly.
 
@@ -21,14 +15,14 @@ rails new app \
   --css tailwind \
   --skip-rubocop \
   --skip-ci \
-  -m https://raw.githubusercontent.com/anonychun/paradis/main/template.rb
+  -m https://raw.githubusercontent.com/anonychun/pupuk/main/template.rb
 ```
 
-This command will create a new Rails application named `app` and apply the Paradis template to it. The `--skip-rubocop` option is used to skip the default RuboCop configuration, as Paradis uses `standard` for linting and formatting.
+This command will create a new Rails application named `app` and apply the Pupuk template to it. The `--skip-rubocop` option is used to skip the default RuboCop configuration, as Pupuk uses `standard` for linting and formatting.
 
 ## Basic Usage
 
-Paradis is just combination of built-in Rails features and some additional gems. Here are some of the features that you can use:
+Pupuk is just combination of built-in Rails features and some additional gems. Here are some of the features that you can use:
 
 #### Blueprint Layer
 

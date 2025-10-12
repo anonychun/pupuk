@@ -3,15 +3,15 @@ require "shellwords"
 
 if __FILE__.match?(%r{\Ahttps?://})
   require "tmpdir"
-  source_paths.unshift(tempdir = Dir.mktmpdir("paradis-"))
+  source_paths.unshift(tempdir = Dir.mktmpdir("pupuk-"))
   at_exit { FileUtils.remove_entry(tempdir) }
   git clone: [
     "--quiet",
-    "https://github.com/anonychun/paradis.git",
+    "https://github.com/anonychun/pupuk.git",
     tempdir
   ].map(&:shellescape).join(" ")
 
-  if (branch = __FILE__[%r{paradis/(.+)/template.rb}, 1])
+  if (branch = __FILE__[%r{pupuk/(.+)/template.rb}, 1])
     Dir.chdir(tempdir) { git checkout: branch }
   end
 else
