@@ -76,12 +76,4 @@ unless options[:database].eql?("sqlite3")
       port: <%= ENV["DATABASE_PORT"] %>
     YAML
   end
-
-  create_file ".env.sample", <<~ENV
-    DATABASE_NAME=
-    DATABASE_USERNAME=
-    DATABASE_PASSWORD=
-    DATABASE_HOST=
-    DATABASE_PORT=
-  ENV
 end

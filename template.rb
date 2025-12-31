@@ -125,5 +125,25 @@ after_bundle do
   append_to_file ".gitignore", ignored_files
   append_to_file ".dockerignore", ignored_files
 
+  create_file ".env.sample", <<~ENV
+    DATABASE_NAME=
+    DATABASE_USERNAME=
+    DATABASE_PASSWORD=
+    DATABASE_HOST=
+    DATABASE_PORT=
+  ENV
+
+  insert_into_file ".gitignore", after: "/.env*" do
+    <<~TXT.prepend("\n")
+      !/.env.sample
+    TXT
+  end
+
+  insert_into_file ".dockerignore", after: "/.env*" do
+    <<~TXT.prepend("\n")
+      !/.env.sample
+    TXT
+  end
+
   run "standardrb --fix-unsafely"
 end
