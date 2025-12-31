@@ -120,7 +120,7 @@ apply "template/javascript.rb"
 
 after_bundle do
   run "bundle lock --add-platform aarch64-linux arm64-darwin x86_64-linux x86_64-darwin"
-  run "bundle install && bundle update && bundle update --bundler"
+  run "bundle update --all && bundle update --bundler"
 
   append_to_file ".gitignore", ignored_files
   append_to_file ".dockerignore", ignored_files
