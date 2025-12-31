@@ -134,13 +134,13 @@ after_bundle do
   ENV
 
   insert_into_file ".gitignore", after: "/.env*" do
-    <<~TXT.prepend("\n")
+    <<~TXT.prepend("\n").chomp
       !/.env.sample
     TXT
   end
 
   insert_into_file ".dockerignore", after: "/.env*" do
-    <<~TXT.prepend("\n")
+    <<~TXT.prepend("\n").chomp
       !/.env.sample
     TXT
   end
