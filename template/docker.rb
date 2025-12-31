@@ -13,7 +13,6 @@ insert_into_file "Dockerfile", after: "ENV RAILS_ENV=\"production\" \\" do
     WEB_CONCURRENCY="auto" \\
     RUBY_YJIT_ENABLE="1" \\
     SOLID_QUEUE_IN_PUMA="1" \\
-    LD_PRELOAD="libjemalloc.so.2" \\
   RUBY
 end
 
