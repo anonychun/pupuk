@@ -43,7 +43,7 @@ def add_gem_group(name, *groups)
   end
 end
 
-insert_into_file "Gemfile", "\n# Other"
+insert_into_file "Gemfile", "\n# Others"
 add_gem_group "dotenv", :development, :test
 add_gem_group "standard", :development
 
